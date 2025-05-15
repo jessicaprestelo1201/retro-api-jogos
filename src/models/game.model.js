@@ -2,7 +2,7 @@ import prisma from "../../prisma/prisma.js";
 
 class GameModel {
   // Obter todos os jogos
-  async findAll(name, platTform) {
+  async findAll(name, platform) {
 const where = {};
 
     if (name) {
@@ -11,9 +11,9 @@ const where = {};
       };
     }
 
-    if (plattform) {
+    if (platform) {
       where.platform = {
-        contains: plattform,
+        contains: platform,
       };
     }
 

@@ -2,13 +2,13 @@ import GameModel from "../models/game.model.js";
 
 class GameController {
   async findAll(req, res) {
-    const {name, plattform} = req.query;
+    const {name, platform} = req.query;
 
-console.log("Nome", name);
-console.log("plattform", plattform);
+//console.log("Nome", name);
+//console.log("platform", platform);
 
     try {
-      const games = await GameModel.findAll(name,plattform);
+      const games = await GameModel.findAll(name,platform);
 
       return res.status(200).json(games);
     } catch (error) {
